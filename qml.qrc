@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Map/MapComponent.qml</file>
+        <file>Map/Marker.qml</file>
+        <file>helper.js</file>
+        <file>style.json</file>
+        <file>Map/MapTypeMenu.qml</file>
+        <file>Map/MapPropertyComponent.qml</file>
+        <file>Map/MapFunctionComponent.qml</file>
+        <file>Map/MapPin.qml</file>
+        <file>Home/HomeComponent.qml</file>
+        <file>Images/background.jpg</file>
+        <file>Controls/Box.qml</file>
+        <file>Controls/Button.qml</file>
+        <file>Controls/ImageButton.qml</file>
+        <file>Controls/ScrollBar.qml</file>
+        <file>Images/button.gif</file>
+        <file>Images/background.png</file>
+        <file>Images/button.png</file>
+        <file>Fonts/Champagne &amp; Limousines Bold.ttf</file>
+        <file>Fonts/Champagne &amp; Limousines.ttf</file>
+        <file>Login.qml</file>
+        <file>Home/Receive.qml</file>
+        <file>Home/Send.qml</file>
+        <file>Images/fingerprint.png</file>
+        <file>Images/back.png</file>
+        <file>Images/logo.png</file>
+    </qresource>
+</RCC>
