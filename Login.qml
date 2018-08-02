@@ -80,11 +80,6 @@ anchors.fill: parent
 
                     onClicked: {
 
-                        //                        userLogAdd(txtLoginUserName.text, 'Login')
-                        //                        stackViewMain.push(homePage)
-                        //                        MAIN.startFetch(); return;
-
-                        // remove the above 3 lines of code for production
 
                         if(txtLoginUserName.text === '' || txtLoginPassword.text === '') {
                             btnLogin.ToolTip.text = 'Fill in username/ password to login'
@@ -94,56 +89,7 @@ anchors.fill: parent
 
 
                         busyIndicatorLoginPage.visible = true
-                        loginUserDrupal(function(data) {
-                            busyIndicatorLoginPage.visible = false
-                            if(data === 'error') {
-                                btnLogin.ToolTip.text = 'Check Internet Connectivity'
-                                btnLogin.ToolTip.visible = true
-                                return
-                            }
-
-                            if (data.length === 0) {
-                                btnLogin.ToolTip.text = 'Username not Valid'
-                                btnLogin.ToolTip.visible = true
-                                return
-                            }
-
-                            if(data[0].field_password[0].value !== txtLoginPassword.text) {
-                                btnLogin.ToolTip.text = 'Password Incorrect'
-                                btnLogin.ToolTip.visible = true
-                                return
-                            }
-
-                            // Get the user'sselected company if any
-                            _USER_COMPANY = typeof data[0].field_company[0] !== 'undefined' ? data[0].field_company[0].value : ''
-
-                            _USER_ID = data[0].nid[0].value
-
-
-                            // Also get the user's bank if any
-                            _USER_BANKS = []
-                            data[0].field_banks.forEach(function(bank){
-                                console.log(bank.value)
-                                _USER_BANKS.push(bank.value)
-                            })
-
-
-
-                            MAIN.startFetch(settings._LANGUAGE == 'en'? 'en' : 'ar')
-
-                            var userDetails = {
-                                userId: _USER_ID,
-                                userName: txtLoginUserName.text,
-                                company: _USER_COMPANY,
-                                banks: _USER_BANKS
-                            }
-
-                            userLogAdd(userDetails, 'Login')
-
-                            txtLoginUserName.text = ''; txtLoginPassword.text = ''
-
-                            stackViewMain.push(homePage)
-                        })
+                        stackView.push("qrc:/Home/HomeComponent.qml")
                     }
                 }
             }
@@ -212,7 +158,6 @@ anchors.fill: parent
 
                         id: txtCountry
                         placeholderText: 'Country'
-                        echoMode: TextInput.Password
                         width: parent.width - 70
                         anchors.horizontalCenter: parent.horizontalCenter
 

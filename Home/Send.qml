@@ -77,10 +77,9 @@ Page {
                     }
 
 
+
+
     }
-
-
-
 
 
     Controls.ImageButton{
@@ -88,7 +87,7 @@ Page {
                     width: 50
                     height: 50
 
-                    anchors.bottom: parent.bottom;anchors.bottomMargin: 15
+                    anchors.top: parent.top;anchors.topMargin:  15
                     anchors.left: parent.left; anchors.leftMargin: 15
                     src:  '../Images/back.png'
 
@@ -103,6 +102,18 @@ Page {
                         stackView.pop()
                     }
                 }
+
+    Contacts {
+        anchors.bottom: parent.bottom
+        width: parent.width
+        height: parent.height * .2
+
+    }
+
+    Amount{
+        id: popupAmount
+
+    }
 
 
 

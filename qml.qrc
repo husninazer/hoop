@@ -27,5 +27,9 @@
         <file>Images/fingerprint.png</file>
         <file>Images/back.png</file>
         <file>Images/logo.png</file>
+        <file>Home/Contacts.qml</file>
+        <file>Images/contact.png</file>
+        <file>Home/Amount.qml</file>
+        <file>Home/Request.qml</file>
     </qresource>
 </RCC>

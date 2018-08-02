@@ -18,6 +18,9 @@ ApplicationWindow {
     height: 640
     title: qsTr("HOOP")
 
+    property var _URL_INFURA :'https://mainnet.infura.io/v3/f40f0ddfd8e14abbb0c1bcdc6e09e860'
+    property var _API_KEY: 'f40f0ddfd8e14abbb0c1bcdc6e09e860'
+    property var _API_SECRET: 'dcfef1323e23464a83b9d45483903968'
 
     property variant map
     property variant home
@@ -31,11 +34,13 @@ ApplicationWindow {
         id: androidDevice
     }
 
+    // Mobile device  - android jnu
+
     StackView {
         id: stackView
         anchors.fill: parent
 
-        initialItem: homeComponent
+        initialItem: loginComponent
     }
 
 
@@ -115,15 +120,18 @@ ApplicationWindow {
 
 
     Component {
-        id: homeComponent
+        id: loginComponent
 
-        HomeComponent {
-            id: home
+        Login {
+            id: login
 
         }
     }
 
-
+    FontLoader {
+        id: fontCLBold
+        source: '../Fonts/Champagne & Limousines Bold.ttf'
+    }
 
     MapTypeMenu {
         id: mapTypeMenu

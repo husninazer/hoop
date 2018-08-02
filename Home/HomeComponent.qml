@@ -30,10 +30,7 @@ Page {
         fillMode: Image.PreserveAspectCrop
     }
 
-    FontLoader {
-        id: fontCLBold
-        source: '../Fonts/Champagne & Limousines Bold.ttf'
-    }
+
 
     Rectangle {
         id: balance
@@ -45,7 +42,7 @@ Page {
         Text  {
             id: text
             anchors.horizontalCenter: parent.horizontalCenter
-            text: '\n\nBALANCE: 203 prims'; color: 'white'; font.pointSize: 35
+            text: '\n\nBALANCE: 203.00'; color: 'white'; font.pointSize: 35
             font.family:fontCLBold.name
         }
 
@@ -61,6 +58,7 @@ Page {
                     }
 
     }
+
 
 
 
@@ -91,7 +89,7 @@ Page {
                         onEntered: { scale = 1.1}
                         onExited: { scale = 1}
                         onClicked: {
-                            stackView.push('qrc:/Login.qml')
+                            stackView.push('qrc:/Home/Receive.qml')
                         }
                     }
 
@@ -123,6 +121,8 @@ Page {
 
 
     }
+
+
 
 
 
